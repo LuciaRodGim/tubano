@@ -1,0 +1,2156 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tubaño | Reformas, Fontanería, Cocinas y Climatización en Orihuela Costa
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandRed: "#E30613",
+              brandDark: "#121212",
+              brandGray: "#F5F5F7",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- Google Translate --- */
+      html {
+        top: 0px !important;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        top: 0px !important;
+        position: static !important;
+      }
+
+      .logo-font {
+        font-family: "Montserrat", sans-serif;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e30613;
+        border-radius: 4px;
+      }
+
+      /* --- Estilos Google Translate --- */
+      iframe.goog-te-banner-frame,
+      .goog-te-banner-frame,
+      .goog-te-banner,
+      .skiptranslate,
+      #goog-gt-tt,
+      .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0px !important;
+        width: 0px !important;
+      }
+      .goog-tooltip,
+      .goog-tooltip:hover {
+        display: none !important;
+      }
+      .goog-text-highlight {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        box-sizing: border-box !important;
+      }
+
+      #google_translate_element {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-brandDark overflow-x-hidden">
+    <div id="google_translate_element"></div>
+
+    <!-- HEADER-->
+    <header
+      class="fixed top-0 left-0 w-full bg-brandDark/95 backdrop-blur-md z-50 border-b border-white/10 shadow-lg transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="#inicio" class="flex flex-col justify-center h-full group">
+            <div
+              class="bg-brandDark px-4 py-1.5 border border-white/10 rounded-md relative overflow-hidden flex items-center gap-3 min-w-[140px] min-h-[52px]"
+            >
+              <div class="relative z-10 flex flex-col justify-center">
+                <img
+                  src="tubanyo.jpeg"
+                  alt="Tubaño"
+                  class="h-10 w-auto object-contain"
+                  onerror="
+                    this.style.display = 'none';
+                    document
+                      .getElementById('logo-fallback-text')
+                      .classList.remove('hidden');
+                  "
+                />
+
+                <div id="logo-fallback-text" class="hidden flex flex-col">
+                  <span
+                    class="text-[10px] text-white uppercase tracking-widest font-light -mb-1 opacity-70"
+                    >Fontanería</span
+                  >
+                  <div class="flex items-baseline gap-1">
+                    <span
+                      class="logo-font text-white text-2xl font-extrabold tracking-tight"
+                      >tu</span
+                    >
+                    <span
+                      class="logo-font text-brandRed text-2xl font-black uppercase tracking-tight"
+                      >baño</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-1 bg-brandRed transition-all duration-300 group-hover:h-2"
+              ></div>
+            </div>
+          </a>
+
+          <!-- MENÚ DESKTOP -->
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#inicio"
+              class="text-white hover:text-brandRed font-medium text-sm transition-colors duration-200"
+              >Inicio</a
+            >
+            <a
+              href="#servicios"
+              class="text-white hover:text-brandRed font-medium text-sm transition-colors duration-200"
+              >Servicios</a
+            >
+            <a
+              href="#ofertas"
+              class="text-white hover:text-brandRed font-medium text-sm transition-colors duration-200"
+              >Ofertas Especiales</a
+            >
+            <a
+              href="#nosotros"
+              class="text-white hover:text-brandRed font-medium text-sm transition-colors duration-200"
+              >Nosotros</a
+            >
+            <a
+              href="#contacto"
+              class="text-white hover:text-brandRed font-medium text-sm transition-colors duration-200"
+              >Contacto</a
+            >
+          </nav>
+
+          <!-- BOTONES Y SELECTOR DE IDIOMA  -->
+          <div class="hidden md:flex items-center space-x-4">
+            <!-- SELECTOR DE IDIOMA PERSONALIZADO -->
+            <div class="relative inline-block text-left">
+              <button
+                type="button"
+                onclick="toggleLanguageDropdown()"
+                class="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-3.5 py-2 rounded-xl text-sm font-medium transition-all"
+                id="lang-menu-btn"
+              >
+                <span id="current-lang-flag">🇪🇸</span>
+                <span id="current-lang-name" class="uppercase">ES</span>
+                <svg
+                  class="w-4 h-4 opacity-75"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <!-- Menú Desplegable Idiomas -->
+              <div
+                id="language-dropdown"
+                class="hidden absolute right-0 mt-2 w-48 bg-zinc-900 border border-white/10 rounded-xl shadow-2xl z-50 py-1 divide-y divide-white/5 animate-fade-in"
+              >
+                <button
+                  onclick="changeLanguage('es')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇪🇸</span> <span>Español</span>
+                </button>
+                <button
+                  onclick="changeLanguage('en')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇬🇧</span> <span>English</span>
+                </button>
+                <button
+                  onclick="changeLanguage('fr')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇫🇷</span> <span>Français</span>
+                </button>
+                <button
+                  onclick="changeLanguage('nl')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇳🇱</span> <span>Nederlands</span>
+                </button>
+                <button
+                  onclick="changeLanguage('de')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇩🇪</span> <span>Deutsch</span>
+                </button>
+                <button
+                  onclick="changeLanguage('no')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇳🇴</span> <span>Norsk</span>
+                </button>
+                <button
+                  onclick="changeLanguage('fi')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇫🇮</span> <span>Suomi</span>
+                </button>
+                <button
+                  onclick="changeLanguage('sv')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇸🇪</span> <span>Svenska</span>
+                </button>
+                <button
+                  onclick="changeLanguage('ru')"
+                  class="flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-brandRed hover:text-white transition-colors"
+                >
+                  <span class="text-lg">🇷🇺</span> <span>Русский</span>
+                </button>
+              </div>
+            </div>
+
+            <a
+              href="tel:+34966774572"
+              class="flex items-center gap-2 bg-brandRed hover:bg-red-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg shadow-brandRed/20"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.78 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.58c0-.57-.45-1.04-1-1.04z"
+                />
+              </svg>
+              Llamar Ahora
+            </a>
+          </div>
+
+          <!-- MENÚ MÓVIL Y SELECTOR IDIOMA -->
+          <div class="flex items-center gap-4 md:hidden">
+            <!-- Botón rápido idioma en móvil -->
+            <button
+              onclick="toggleMobileLanguageSelector()"
+              class="text-xl p-1 bg-white/10 rounded-lg border border-white/15 w-9 h-9 flex items-center justify-center"
+            >
+              <span id="mobile-lang-flag">🇪🇸</span>
+            </button>
+
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="text-gray-300 hover:text-white focus:outline-none"
+              aria-label="Abrir Menú"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  id="hamburger-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  id="close-icon"
+                  class="hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- REJILLA IDIOMAS RÁPIDA MÓVIL -->
+      <div
+        id="mobile-lang-selector"
+        class="hidden bg-zinc-950 border-t border-white/10 px-4 py-4 grid grid-cols-3 gap-2"
+      >
+        <button
+          onclick="changeLanguage('es')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇪🇸</span> <span class="text-xs mt-1">ES</span>
+        </button>
+        <button
+          onclick="changeLanguage('en')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇬🇧</span> <span class="text-xs mt-1">EN</span>
+        </button>
+        <button
+          onclick="changeLanguage('fr')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇫🇷</span> <span class="text-xs mt-1">FR</span>
+        </button>
+        <button
+          onclick="changeLanguage('nl')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇳🇱</span> <span class="text-xs mt-1">NL</span>
+        </button>
+        <button
+          onclick="changeLanguage('de')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇩🇪</span> <span class="text-xs mt-1">DE</span>
+        </button>
+        <button
+          onclick="changeLanguage('no')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇳🇴</span> <span class="text-xs mt-1">NO</span>
+        </button>
+        <button
+          onclick="changeLanguage('fi')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇫🇮</span> <span class="text-xs mt-1">FI</span>
+        </button>
+        <button
+          onclick="changeLanguage('sv')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇸🇪</span> <span class="text-xs mt-1">SV</span>
+        </button>
+        <button
+          onclick="changeLanguage('ru')"
+          class="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 text-white hover:bg-brandRed transition-all"
+        >
+          <span class="text-xl">🇷🇺</span> <span class="text-xs mt-1">RU</span>
+        </button>
+      </div>
+
+      <!-- MENÚ DESPLEGABLE MÓVIL PRINCIPAL -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-brandDark border-t border-white/10 animate-fade-in"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="#inicio"
+            onclick="toggleMenu()"
+            class="block px-3 py-2.5 rounded-md text-base font-medium text-white hover:bg-brandRed transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            onclick="toggleMenu()"
+            class="block px-3 py-2.5 rounded-md text-base font-medium text-white hover:bg-brandRed transition-colors"
+            >Servicios</a
+          >
+          <a
+            href="#ofertas"
+            onclick="toggleMenu()"
+            class="block px-3 py-2.5 rounded-md text-base font-medium text-white hover:bg-brandRed transition-colors"
+            >Ofertas Especiales</a
+          >
+          <a
+            href="#nosotros"
+            onclick="toggleMenu()"
+            class="block px-3 py-2.5 rounded-md text-base font-medium text-white hover:bg-brandRed transition-colors"
+            >Ubicación y Contacto</a
+          >
+          <div class="pt-4 pb-2 border-t border-white/5 px-3">
+            <a
+              href="#contacto"
+              onclick="toggleMenu()"
+              class="flex items-center justify-center gap-2 w-full bg-brandRed text-white py-3 rounded-md font-semibold text-center hover:bg-red-700 transition-all"
+            >
+              Solicitar Presupuesto
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--(PORTADA PRINCIPAL) -->
+    <section
+      id="inicio"
+      class="relative pt-24 min-h-[90vh] flex items-center bg-gradient-to-br from-brandDark via-zinc-900 to-black overflow-hidden"
+    >
+      <!-- Decoraciones de fondo -->
+      <div
+        class="absolute -top-40 -right-40 w-96 h-96 bg-brandRed/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-20 -left-20 w-96 h-96 bg-brandRed/5 rounded-full blur-3xl"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 w-full"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+            <div
+              class="inline-flex items-center gap-2 bg-brandRed/15 border border-brandRed/30 px-4 py-2 rounded-full text-brandRed text-xs sm:text-sm font-semibold tracking-wider uppercase mx-auto lg:mx-0"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-brandRed animate-ping"
+              ></span>
+              Especialistas en Reformas y Climatización
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight"
+            >
+              Transformamos tu hogar <br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-brandRed to-red-400"
+                >con Estilo y Calidad</span
+              >
+            </h1>
+            <p
+              class="text-lg text-gray-300 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed"
+            >
+              En
+              <strong class="text-white font-medium">Tubaño</strong> realizamos
+              reformas integrales de baños y cocinas, instalación de
+              climatización, calentadores y armarios a medida en
+              <strong class="text-white font-medium">Orihuela Costa</strong>.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#contacto"
+                class="bg-brandRed hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brandRed/30 transition-all duration-300 transform hover:-translate-y-1 text-center"
+              >
+                Pedir Presupuesto Gratis
+              </a>
+              <a
+                href="#servicios"
+                class="bg-white/10 hover:bg-white/15 text-white border border-white/20 font-bold px-8 py-4 rounded-xl transition-all duration-300 backdrop-blur-sm text-center"
+              >
+                Ver Servicios
+              </a>
+            </div>
+
+            <div
+              class="grid grid-cols-3 gap-6 pt-6 border-t border-white/15 max-w-md mx-auto lg:mx-0"
+            >
+              <div>
+                <span class="block text-white text-2xl sm:text-3xl font-bold"
+                  >15+</span
+                >
+                <span class="text-xs text-gray-400 uppercase tracking-wider"
+                  >Años de Exp.</span
+                >
+              </div>
+              <div>
+                <span class="block text-white text-2xl sm:text-3xl font-bold"
+                  >100%</span
+                >
+                <span class="text-xs text-gray-400 uppercase tracking-wider"
+                  >Garantía</span
+                >
+              </div>
+              <div>
+                <span class="block text-white text-2xl sm:text-3xl font-bold"
+                  >1.2k+</span
+                >
+                <span class="text-xs text-gray-400 uppercase tracking-wider"
+                  >Proyectos</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- BANNER DE SERVICIOS -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-[400px] lg:max-w-none">
+              <div
+                class="bg-gradient-to-br from-zinc-800 to-zinc-950 p-1 rounded-2xl shadow-2xl border border-white/10 relative overflow-hidden"
+              >
+                <div class="bg-zinc-900 rounded-2xl p-6 space-y-6">
+                  <div
+                    class="flex items-center justify-between border-b border-white/5 pb-4"
+                  >
+                    <div class="flex items-center gap-2">
+                      <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-xs text-gray-400">Tubaño Campoamor</span>
+                  </div>
+                  <div class="space-y-4">
+                    <div
+                      class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brandRed/30 transition-all"
+                    >
+                      <div class="flex gap-4 items-start">
+                        <div
+                          class="p-2.5 bg-brandRed/25 rounded-lg text-brandRed"
+                        >
+                          <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 11H19c0 .738-.214 1.424-.582 2m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="text-white font-semibold text-sm">
+                            Cambio de Platos de Ducha
+                          </h3>
+                          <p class="text-xs text-gray-400 mt-1">
+                            Antideslizantes, mamparas y griferías premium.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brandRed/30 transition-all"
+                    >
+                      <div class="flex gap-4 items-start">
+                        <div
+                          class="p-2.5 bg-brandRed/25 rounded-lg text-brandRed"
+                        >
+                          <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="text-white font-semibold text-sm">
+                            Aire Acondicionado y Calentadores
+                          </h3>
+                          <p class="text-xs text-gray-400 mt-1">
+                            Mantén tu hogar a la temperatura perfecta.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-brandRed/30 transition-all"
+                    >
+                      <div class="flex gap-4 items-start">
+                        <div
+                          class="p-2.5 bg-brandRed/25 rounded-lg text-brandRed"
+                        >
+                          <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="text-white font-semibold text-sm">
+                            Cocinas y Armarios de Dormitorio
+                          </h3>
+                          <p class="text-xs text-gray-400 mt-1">
+                            Encimeras espectaculares e interiores a medida.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-brandRed font-bold text-sm tracking-widest uppercase"
+            >¿Qué hacemos por ti?</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-black text-brandDark mt-2 tracking-tight"
+          >
+            Especialistas en Reformas del Hogar
+          </h2>
+          <p class="text-gray-500 mt-4">
+            Ofrecemos soluciones integrales llave en mano. Nos encargamos de
+            todo el proceso para que no tengas que preocuparte de nada.
+          </p>
+        </div>
+
+        <!-- GRID SERVICIOS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brandRed/30 hover:bg-white hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 bg-brandRed/10 group-hover:bg-brandRed rounded-xl flex items-center justify-center text-brandRed group-hover:text-white transition-colors duration-300 mb-6"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brandDark mb-3">
+              Baños Modernos
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Instalación experta de platos de ducha antideslizantes, mobiliario
+              elegante, griferías empotradas y mamparas de diseño.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-600 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Cambio de bañera por ducha
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Muebles suspendidos
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Griferías termostáticas
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brandRed/30 hover:bg-white hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 bg-brandRed/10 group-hover:bg-brandRed rounded-xl flex items-center justify-center text-brandRed group-hover:text-white transition-colors duration-300 mb-6"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brandDark mb-3">Climatización</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Sistemas eficientes de climatización y ACS. Instalación autorizada
+              de aires acondicionados, termos eléctricos y calentadores.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-600 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span> Split
+                y Conductos
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Termos eléctricos eficientes
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Calentadores de gas
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brandRed/30 hover:bg-white hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 bg-brandRed/10 group-hover:bg-brandRed rounded-xl flex items-center justify-center text-brandRed group-hover:text-white transition-colors duration-300 mb-6"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brandDark mb-3">
+              Cocinas a Medida
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Diseño e instalación de muebles de cocina con materiales modernos
+              y encimeras de alta resistencia en cuarzo o porcelánico.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-600 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Encimeras de Silestone / Neolith
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Cajoneras con auto-cierre
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Distribuciones ergonómicas
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:border-brandRed/30 hover:bg-white hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 bg-brandRed/10 group-hover:bg-brandRed rounded-xl flex items-center justify-center text-brandRed group-hover:text-white transition-colors duration-300 mb-6"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-brandDark mb-3">
+              Armarios & Habitaciones
+            </h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Fabricación y colocación de armarios empotrados, vestidores y
+              frentes de puertas correderas a la medida de tu habitación.
+            </p>
+            <ul class="space-y-2 text-xs text-gray-600 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Interiores optimizados
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Puertas correderas y abatibles
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-brandRed rounded-full"></span>
+                Vestidores de ensueño
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL DE OFERTAS -->
+    <section
+      id="ofertas"
+      class="py-24 bg-brandDark text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-radial-gradient from-zinc-800 to-black opacity-40"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12"
+        >
+          <div>
+            <span
+              class="text-brandRed font-bold text-sm tracking-widest uppercase"
+              >Promociones Activas</span
+            >
+            <h2 class="text-3xl sm:text-4xl font-black mt-2 tracking-tight">
+              Ofertas Especiales Destacadas
+            </h2>
+          </div>
+          <div class="flex gap-2 mt-4 md:mt-0">
+            <button
+              onclick="prevSlide()"
+              class="p-3 bg-white/5 hover:bg-brandRed rounded-full border border-white/10 transition-colors cursor-pointer"
+              aria-label="Anterior oferta"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="nextSlide()"
+              class="p-3 bg-white/5 hover:bg-brandRed rounded-full border border-white/10 transition-colors cursor-pointer"
+              aria-label="Siguiente oferta"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CONTENEDOR CARRUSEL -->
+        <div
+          class="relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-sm min-h-[380px] sm:min-h-[320px] lg:min-h-[280px]"
+        >
+          <div
+            class="carousel-slide transition-opacity duration-500 absolute inset-0 p-8 sm:p-12 flex flex-col md:flex-row gap-8 items-center justify-between opacity-100"
+          >
+            <div class="space-y-4 max-w-xl">
+              <div
+                class="inline-block bg-brandRed text-xs font-extrabold px-3 py-1.5 rounded-md uppercase tracking-wider"
+              >
+                Top Ventas
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Cambio de Bañera por Plato de Ducha
+              </h3>
+              <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                Retiramos tu vieja bañera e instalamos un plato de ducha de
+                carga mineral extraplano, antideslizante con mampara de cristal
+                templado y grifería de última generación. ¡Obra limpia en tiempo
+                récord!
+              </p>
+              <div class="text-2xl font-black text-brandRed">
+                Desde 950€
+                <span class="text-xs text-gray-400 font-normal"
+                  >Todo Incluido</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex-shrink-0 bg-white/5 p-6 rounded-xl border border-white/10 w-full md:w-auto text-center md:text-left"
+            >
+              <span
+                class="block text-gray-400 text-xs uppercase tracking-wider mb-1"
+                >Presupuesto Rápido</span
+              >
+              <div class="text-lg font-bold mb-3">
+                ¿Te interesa esta oferta?
+              </div>
+              <a
+                href="#contacto"
+                onclick="seleccionarOferta('Plato de Ducha')"
+                class="inline-block w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-lg text-sm text-center transition-all"
+                >Consúltanos</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="carousel-slide transition-opacity duration-500 absolute inset-0 p-8 sm:p-12 flex flex-col md:flex-row gap-8 items-center justify-between opacity-0 pointer-events-none"
+          >
+            <div class="space-y-4 max-w-xl">
+              <div
+                class="inline-block bg-brandRed text-xs font-extrabold px-3 py-1.5 rounded-md uppercase tracking-wider"
+              >
+                Temporada Verano/Invierno
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Pack Climatización Confort
+              </h3>
+              <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                Equipa tu hogar con las mejores marcas de Aire Acondicionado y
+                calentadores de alta eficiencia energética. Mayor ahorro en tu
+                factura de luz. Instalación premium autorizada.
+              </p>
+              <div class="text-2xl font-black text-brandRed">
+                Ahorra hasta un 15%
+                <span class="text-xs text-gray-400 font-normal"
+                  >comprando el pack</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex-shrink-0 bg-white/5 p-6 rounded-xl border border-white/10 w-full md:w-auto text-center md:text-left"
+            >
+              <span
+                class="block text-gray-400 text-xs uppercase tracking-wider mb-1"
+                >Presupuesto Rápido</span
+              >
+              <div class="text-lg font-bold mb-3">
+                ¿Te interesa esta oferta?
+              </div>
+              <a
+                href="#contacto"
+                onclick="seleccionarOferta('Pack Climatización')"
+                class="inline-block w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-lg text-sm text-center transition-all"
+                >Consúltanos</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="carousel-slide transition-opacity duration-500 absolute inset-0 p-8 sm:p-12 flex flex-col md:flex-row gap-8 items-center justify-between opacity-0 pointer-events-none"
+          >
+            <div class="space-y-4 max-w-xl">
+              <div
+                class="inline-block bg-brandRed text-xs font-extrabold px-3 py-1.5 rounded-md uppercase tracking-wider"
+              >
+                Premium
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Cocina Completa con Encimera de Lujo
+              </h3>
+              <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                Renovamos el corazón de tu hogar. Muebles con acabados
+                mate/brillo antihuellas y encimeras de Silestone, Dekton o
+                granito natural con un diseño espectacular y optimizado.
+              </p>
+              <div class="text-2xl font-black text-brandRed">
+                Estudio 3D Gratis
+                <span class="text-xs text-gray-400 font-normal"
+                  >con tu proyecto</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex-shrink-0 bg-white/5 p-6 rounded-xl border border-white/10 w-full md:w-auto text-center md:text-left"
+            >
+              <span
+                class="block text-gray-400 text-xs uppercase tracking-wider mb-1"
+                >Presupuesto Rápido</span
+              >
+              <div class="text-lg font-bold mb-3">
+                ¿Te interesa esta oferta?
+              </div>
+              <a
+                href="#contacto"
+                onclick="seleccionarOferta('Cocinas')"
+                class="inline-block w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-lg text-sm text-center transition-all"
+                >Consúltanos</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center gap-2 mt-6">
+          <span
+            onclick="setSlide(0)"
+            class="carousel-dot w-3 h-3 rounded-full bg-brandRed cursor-pointer transition-all duration-300"
+          ></span>
+          <span
+            onclick="setSlide(1)"
+            class="carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+          ></span>
+          <span
+            onclick="setSlide(2)"
+            class="carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer transition-all duration-300"
+          ></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCALIZACIÓN -->
+    <section id="nosotros" class="py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- FOTOS Y DETALLES DE LOCALIZACIÓN -->
+          <div class="lg:col-span-6 space-y-6">
+            <span
+              class="text-brandRed font-bold text-sm tracking-widest uppercase"
+              >Ubicación Estratégica</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl font-black text-brandDark tracking-tight"
+            >
+              Visítanos en Orihuela Costa
+            </h2>
+            <p class="text-gray-500 leading-relaxed font-light">
+              Nuestra tienda física y centro de exposición se encuentra en el
+              prestigioso
+              <strong class="text-brandDark font-medium"
+                >Centro Comercial La Fuente</strong
+              >. Aquí podrás ver muestras de platos de ducha, catálogos de
+              muebles de baños, encimeras de cocina, perfiles de grifería y
+              soluciones de climatización de primera mano.
+            </p>
+
+            <div class="space-y-4 pt-4 border-t border-gray-100">
+              <div class="flex gap-4 items-start">
+                <div class="p-3 bg-brandRed/10 rounded-xl text-brandRed mt-1">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brandDark">Dirección Oficial</h4>
+                  <p class="text-sm text-gray-500 mt-1">
+                    Centro Comercial La Fuente, Local N, Orihuela Costa (03189),
+                    Alicante.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div class="p-3 bg-brandRed/10 rounded-xl text-brandRed mt-1">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brandDark">Horario de Atención</h4>
+                  <p class="text-sm text-gray-500 mt-1">
+                    Lunes a Viernes: 09:30 - 14:00 y 16:30 - 20:00 <br />
+                    Sábados: 10:00 - 13:30
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div class="p-3 bg-brandRed/10 rounded-xl text-brandRed mt-1">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brandDark">Correo Electrónico</h4>
+                  <a
+                    href="mailto:tienda_campoamor@hotmail.es"
+                    class="text-sm text-brandRed font-medium hover:underline"
+                    >tienda_campoamor@hotmail.es</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div
+              class="bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border border-gray-200/60 p-2 relative"
+            >
+              <div
+                class="w-full h-[400px] bg-sky-100 relative rounded-2xl overflow-hidden flex items-center justify-center"
+              >
+                <div
+                  class="absolute inset-0 opacity-25"
+                  style="
+                    background-image: radial-gradient(
+                      #121212 1px,
+                      transparent 1px
+                    );
+                    background-size: 24px 24px;
+                  "
+                ></div>
+
+                <div
+                  class="absolute top-1/3 left-0 w-full h-8 bg-white/80 border-y border-gray-300 transform -rotate-6"
+                ></div>
+                <div
+                  class="absolute top-0 left-1/4 w-12 h-full bg-white/80 border-x border-gray-300 transform rotate-12"
+                ></div>
+                <div
+                  class="absolute bottom-1/4 left-0 w-full h-10 bg-white/80 border-y border-gray-300 transform rotate-3"
+                ></div>
+
+                <!-- Zona CC La Fuente -->
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-28 bg-emerald-100 border border-emerald-300 rounded-xl flex flex-col items-center justify-center p-3 text-center shadow-lg"
+                >
+                  <span
+                    class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider"
+                    >C.C. LA FUENTE</span
+                  >
+                  <span class="text-[9px] text-emerald-600"
+                    >Orihuela Costa</span
+                  >
+                </div>
+
+                <!-- Marcador de Posición "Tubaño" -->
+                <div
+                  class="absolute top-[48%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center"
+                >
+                  <div
+                    class="bg-brandDark text-white text-xs px-3 py-1.5 rounded-lg font-bold shadow-xl border border-brandRed flex items-center gap-1 animate-bounce mb-2"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-brandRed inline-block"
+                    ></span>
+                    Tubaño
+                  </div>
+                  <div
+                    class="w-8 h-8 bg-brandRed rounded-full flex items-center justify-center shadow-lg border-2 border-white"
+                  >
+                    <svg
+                      class="w-4 h-4 text-white fill-current"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Botón para ver en Google Maps Real -->
+                <div
+                  class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-gray-200 shadow-xl flex items-center justify-between"
+                >
+                  <div class="text-left">
+                    <p class="text-xs font-bold text-brandDark">
+                      ¿Cómo llegar desde tu ubicación?
+                    </p>
+                    <p class="text-[10px] text-gray-500">
+                      C.C. La Fuente, Orihuela Costa
+                    </p>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=CC+La+Fuente+Orihuela+Costa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-brandDark hover:bg-brandRed text-white text-xs font-bold px-4 py-2 rounded-lg transition-all"
+                  >
+                    Ver en Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FORMULARIO -->
+    <section
+      id="contacto"
+      class="py-24 bg-gray-50 relative overflow-hidden border-t border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-5 space-y-6">
+            <span
+              class="text-brandRed font-bold text-sm tracking-widest uppercase"
+              >Atención Inmediata</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl font-black text-brandDark tracking-tight"
+            >
+              Solicita tu Presupuesto sin Compromiso
+            </h2>
+            <p class="text-gray-500 leading-relaxed font-light">
+              ¿Tienes una idea en mente? ¿Necesitas cambiar tu bañera por plato
+              de ducha o instalar aire acondicionado antes del verano? Rellena
+              el formulario y envíanos tu consulta directa.
+            </p>
+            <p class="text-gray-500 leading-relaxed font-light">
+              Recibirás respuesta en menos de 24 horas laborables en tu correo
+              de contacto de parte de nuestro equipo.
+            </p>
+
+            <div
+              class="bg-brandDark p-6 rounded-2xl border border-white/15 text-white space-y-4"
+            >
+              <div class="font-bold text-lg border-b border-white/10 pb-2">
+                Información de Envío
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="p-1.5 bg-brandRed/20 rounded text-brandRed"
+                  >✔</span
+                >
+                <span
+                  >Enviado directamente a:
+                  <strong class="text-white"
+                    >tienda_campoamor@hotmail.es</strong
+                  ></span
+                >
+              </div>
+              <div class="flex items-center gap-3 text-sm text-gray-300">
+                <span class="p-1.5 bg-brandRed/20 rounded text-brandRed"
+                  >✔</span
+                >
+                <span>Garantía de privacidad y protección de datos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULARIO DE CONTACTO -->
+          <div
+            class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 relative"
+          >
+            <!-- Banner de Alertas -->
+            <div
+              id="validation-alert"
+              class="hidden mb-6 p-4 text-sm text-red-800 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center gap-3 animate-fade-in"
+            >
+              <span class="flex-shrink-0 text-lg">⚠️</span>
+              <span id="validation-alert-text"></span>
+            </div>
+
+            <form
+              id="contact-form"
+              onsubmit="handleFormSubmit(event)"
+              class="space-y-6"
+            >
+              <!-- FILTRO ANTISPAM HONEYPOT-->
+              <input
+                type="text"
+                name="_honey"
+                id="honeypot"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-semibold text-brandDark mb-2"
+                    >Nombre y Apellidos *</label
+                  >
+
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÇç\s]+"
+                    title="El nombre solo debe contener letras."
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandRed focus:border-transparent transition-all text-sm"
+                    placeholder="Ej. Juan Pérez"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-semibold text-brandDark mb-2"
+                    >Teléfono de Contacto *</label
+                  >
+
+                  <input
+                    type="text"
+                    id="phone"
+                    required
+                    oninput="
+                      this.value = this.value.replace(/(?!^\+)[^0-9]/g, '')
+                    "
+                    pattern="^\+?[0-9]{9,15}$"
+                    title="Introduce un número de teléfono válido (puede contener '+' al inicio y entre 9 y 15 dígitos)."
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandRed focus:border-transparent transition-all text-sm"
+                    placeholder="Ej. +34600000000"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-semibold text-brandDark mb-2"
+                  >Correo Electrónico (Opcional)</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandRed focus:border-transparent transition-all text-sm"
+                  placeholder="Ej. juan@correo.com (dejar vacío si no tiene)"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-semibold text-brandDark mb-2"
+                  >Servicio de Interés</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandRed focus:border-transparent transition-all text-sm text-gray-600"
+                >
+                  <option value="Bañera por plato de ducha">
+                    Cambio de Bañera por Plato de Ducha
+                  </option>
+                  <option value="Mobiliario de baño / Grifería">
+                    Mobiliario de Baño o Grifería
+                  </option>
+                  <option value="Aire acondicionado / Calentador">
+                    Aire Acondicionado o Calentador/Termo
+                  </option>
+                  <option value="Reformas de cocina / Encimeras">
+                    Cocinas y Encimeras (Silestone/Dekton)
+                  </option>
+                  <option value="Armarios y Dormitorios">
+                    Armarios Empotrados y Vestidores
+                  </option>
+                  <option value="Otro servicio">
+                    Otros servicios de Fontanería/Reforma
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-semibold text-brandDark mb-2"
+                  >Cuéntanos qué necesitas *</label
+                >
+                <textarea
+                  id="message"
+                  required
+                  rows="4"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandRed focus:border-transparent transition-all text-sm"
+                  placeholder="Explícanos tu idea o proyecto brevemente..."
+                ></textarea>
+              </div>
+
+              <!-- Checkbox privacidad (Obligatorio por ley) -->
+              <div class="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  required
+                  class="mt-1 accent-brandRed cursor-pointer"
+                />
+                <label
+                  for="privacy"
+                  class="text-xs text-gray-500 leading-normal cursor-pointer select-none"
+                >
+                  Acepto la
+                  <button
+                    type="button"
+                    onclick="openPrivacyModal()"
+                    class="text-brandRed font-semibold hover:underline inline-block focus:outline-none"
+                  >
+                    política de privacidad y protección de datos
+                  </button>
+                  de Tubaño para que puedan gestionar mi consulta de forma
+                  segura. *
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 cursor-pointer flex items-center justify-center gap-2"
+              >
+                Enviar Mensaje a Tienda
+              </button>
+            </form>
+
+            <div id="success-screen" class="hidden text-center py-12 space-y-6">
+              <div
+                class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto shadow-inner animate-pulse"
+              >
+                <svg
+                  class="w-10 h-10"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-2xl font-black text-brandDark">
+                  ¡Solicitud Procesada con Éxito!
+                </h3>
+                <p class="text-sm text-gray-500 max-w-md mx-auto">
+                  Tu solicitud se ha enviado automáticamente a
+                  <strong class="text-brandDark font-semibold"
+                    >tienda_campoamor@hotmail.es</strong
+                  >. Un asesor técnico se pondrá en contacto contigo muy pronto.
+                </p>
+              </div>
+
+              <div
+                class="bg-gray-50 p-6 rounded-2xl border border-gray-100 max-w-md mx-auto text-left text-xs space-y-2"
+              >
+                <div>
+                  <strong class="text-gray-400">Cliente:</strong>
+                  <span
+                    id="summary-name"
+                    class="font-bold text-brandDark"
+                  ></span>
+                </div>
+                <div>
+                  <strong class="text-gray-400">Teléfono:</strong>
+                  <span
+                    id="summary-phone"
+                    class="font-bold text-brandDark"
+                  ></span>
+                </div>
+                <div>
+                  <strong class="text-gray-400">Servicio solicitado:</strong>
+                  <span
+                    id="summary-service"
+                    class="font-bold text-brandDark"
+                  ></span>
+                </div>
+              </div>
+
+              <button
+                onclick="resetForm()"
+                class="bg-brandDark hover:bg-brandRed text-white text-xs font-bold px-6 py-3 rounded-xl transition-all cursor-pointer"
+              >
+                Enviar otro mensaje
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL POLÍTICA DE PRIVACIDAD (RGPD / LOPD COMPLIANT) -->
+    <div
+      id="privacy-modal"
+      class="hidden fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl p-6 sm:p-8 space-y-6 animate-scale-up"
+      >
+        <div
+          class="flex items-center justify-between border-b border-gray-150 pb-4"
+        >
+          <h3
+            class="text-xl sm:text-2xl font-black text-brandDark flex items-center gap-2"
+          >
+            <span class="text-brandRed text-2xl">📋</span>
+            Política de Privacidad y LOPD
+          </h3>
+          <button
+            onclick="closePrivacyModal()"
+            class="text-gray-400 hover:text-brandDark text-2xl font-bold focus:outline-none"
+            aria-label="Cerrar ventana"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div
+          class="space-y-4 text-xs sm:text-sm text-gray-600 leading-relaxed overflow-y-auto"
+        >
+          <p class="font-medium text-brandDark">
+            En Tubaño (marca registrada asociada a Fontanería), nos tomamos muy
+            en serio la seguridad y el tratamiento de los datos personales de
+            nuestros clientes de acuerdo con el Reglamento General de Protección
+            de Datos (RGPD) de la UE y la Ley Orgánica de Protección de Datos
+            (LOPD-GDD) de España.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            1. Responsable del Tratamiento
+          </h4>
+          <p>
+            El responsable del tratamiento de sus datos es
+            <strong>Tubaño (Fontanería)</strong>, con domicilio comercial en
+            Centro Comercial La Fuente, Local N, Orihuela Costa (03189),
+            Alicante, España, y correo de contacto
+            <strong>tienda_campoamor@hotmail.es</strong>.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            2. Finalidad del Tratamiento
+          </h4>
+          <p>
+            Los datos que nos facilita (Nombre, Teléfono de contacto y Correo
+            Electrónico) son tratados con la única finalidad de ponernos en
+            contacto con usted, resolver sus dudas de forma técnica y elaborar
+            presupuestos personalizados para sus proyectos de reformas,
+            fontanería o climatización en la zona de Orihuela Costa.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            3. Conservación de los Datos
+          </h4>
+          <p>
+            Los datos proporcionados se conservarán durante el tiempo
+            estrictamente necesario para atender su solicitud y realizar el
+            seguimiento comercial del presupuesto solicitado, o hasta que
+            solicite su supresión de nuestros registros.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            4. Legitimación
+          </h4>
+          <p>
+            La base legal para el tratamiento de sus datos es el consentimiento
+            explícito del usuario al enviar voluntariamente nuestro formulario
+            de contacto tras marcar la correspondiente casilla de aceptación
+            legal obligatoria.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            5. Destinatarios de sus Datos
+          </h4>
+          <p>
+            Le garantizamos que sus datos personales no serán compartidos,
+            vendidos, cedidos ni distribuidos a ninguna otra empresa,
+            organización o tercero comercial bajo ningún concepto. Sus datos son
+            de uso estrictamente confidencial de Tubaño.
+          </p>
+
+          <h4 class="font-bold text-brandDark uppercase tracking-wider text-xs">
+            6. Sus Derechos (ARCO)
+          </h4>
+          <p>
+            Tiene derecho a acceder a sus datos personales, solicitar la
+            rectificación de datos inexactos, o pedir su completa eliminación
+            enviando un mensaje directo a nuestro correo de tienda:
+            <strong>tienda_campoamor@hotmail.es</strong>.
+          </p>
+        </div>
+
+        <div class="border-t border-gray-150 pt-4 flex justify-end">
+          <button
+            onclick="closePrivacyModal()"
+            class="bg-brandDark hover:bg-brandRed text-white text-xs font-bold px-6 py-3 rounded-xl transition-all cursor-pointer"
+          >
+            He leído y entiendo el documento
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandDark text-white pt-16 pb-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/5"
+        >
+          <div class="space-y-4">
+            <div class="flex items-baseline gap-1">
+              <span class="logo-font text-white text-xl font-extrabold"
+                >tu</span
+              >
+              <span class="logo-font text-brandRed text-xl font-black uppercase"
+                >baño</span
+              >
+            </div>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">
+              Expertos en reformas integrales, fontanería especializada,
+              armarios a medida, instalación de encimeras y climatización
+              eficiente para hogares con gusto.
+            </p>
+            <span class="block text-xs text-gray-500 font-light">
+              Marca asociada:
+              <strong class="text-gray-400">Fontanería</strong>
+            </span>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm uppercase tracking-wider text-brandRed mb-4"
+            >
+              Nuestros Servicios
+            </h4>
+            <ul class="space-y-2 text-xs text-gray-400">
+              <li>
+                <a href="#servicios" class="hover:text-white transition-colors"
+                  >Platos de Ducha a Medida</a
+                >
+              </li>
+              <li>
+                <a href="#servicios" class="hover:text-white transition-colors"
+                  >Mobiliario de Baño y Grifos</a
+                >
+              </li>
+              <li>
+                <a href="#servicios" class="hover:text-white transition-colors"
+                  >Aire Acondicionado Split</a
+                >
+              </li>
+              <li>
+                <a href="#servicios" class="hover:text-white transition-colors"
+                  >Termos Eléctricos y Calentadores</a
+                >
+              </li>
+              <li>
+                <a href="#servicios" class="hover:text-white transition-colors"
+                  >Encimeras de Cocina y Armarios</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="font-bold text-sm uppercase tracking-wider text-brandRed mb-4"
+            >
+              Zonas de Cobertura
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed font-light mb-2">
+              Prestamos servicios en toda la zona de:
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Orihuela Costa</span
+              >
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Campoamor</span
+              >
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Torrevieja</span
+              >
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Cabo Roig</span
+              >
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Villamartín</span
+              >
+              <span
+                class="text-[10px] bg-white/5 px-2 py-1 rounded border border-white/5 text-gray-300"
+                >Pilar de la Horadada</span
+              >
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h4
+              class="font-bold text-sm uppercase tracking-wider text-brandRed mb-4"
+            >
+              Contacto Directo
+            </h4>
+            <ul class="space-y-3 text-xs text-gray-400">
+              <li class="flex items-center gap-2">
+                <span class="text-brandRed">✉</span>
+                <a
+                  href="mailto:tienda_campoamor@hotmail.es"
+                  class="hover:text-white transition-colors"
+                  >tienda_campoamor@hotmail.es</a
+                >
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brandRed">📞</span>
+                <a
+                  href="tel:+34966761122"
+                  class="hover:text-white transition-colors"
+                  >+34 966 761 122</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between pt-8 text-xs text-gray-500"
+        >
+          <p>&copy; 2026 Tubaño (Fontanería). Todos los derechos reservados.</p>
+          <div class="flex gap-4 mt-4 sm:mt-0">
+            <button
+              onclick="openPrivacyModal()"
+              class="hover:text-white transition-colors text-left focus:outline-none"
+            >
+              Política de Privacidad
+            </button>
+            <a href="#" class="hover:text-white transition-colors"
+              >Aviso Legal</a
+            >
+            <a href="#" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT COMPLETA -->
+    <script>
+      // ---GOOGLE TRANSLATE ENGINE ---
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "es",
+            includedLanguages: "es,en,fr,nl,de,no,fi,sv,ru",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+
+      // DETECTOR DE COOKIE
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+
+      function checkActiveLanguage() {
+        let lang = localStorage.getItem("selected_language") || "es";
+        const googTrans = getCookie("googtrans");
+
+        if (googTrans) {
+          const parts = googTrans.split("/");
+          if (parts.length >= 3) {
+            lang = parts[2].toLowerCase();
+          }
+        }
+
+        const langFlags = {
+          es: "🇪🇸",
+          en: "🇬🇧",
+          fr: "🇫🇷",
+          nl: "🇳🇱",
+          de: "🇩🇪",
+          no: "🇳🇴",
+          fi: "🇫🇮",
+          sv: "🇸🇪",
+          ru: "🇷🇺",
+        };
+
+        const langName = {
+          es: "ES",
+          en: "EN",
+          fr: "FR",
+          nl: "NL",
+          de: "DE",
+          no: "NO",
+          fi: "FI",
+          sv: "SV",
+          ru: "RU",
+        };
+
+        if (langFlags[lang]) {
+          document.getElementById("current-lang-flag").textContent =
+            langFlags[lang];
+          document.getElementById("current-lang-name").textContent =
+            langName[lang];
+          document.getElementById("mobile-lang-flag").textContent =
+            langFlags[lang];
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", checkActiveLanguage);
+
+      //CAMBIAR DE IDIOMA Y REFRESCAR CON COOKIES Y LOCALSTORAGE
+      function changeLanguage(langCode) {
+        const cookieValue = `/es/${langCode}`;
+
+        // Guardamos en LocalStorage
+        localStorage.setItem("selected_language", langCode);
+
+        // Forzar cookie
+        document.cookie = `googtrans=${cookieValue}; path=/;`;
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname};`;
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=.${window.location.hostname};`;
+
+        location.reload();
+      }
+
+      // CONTROLADORES VISUALES
+      function toggleLanguageDropdown() {
+        const dropdown = document.getElementById("language-dropdown");
+        dropdown.classList.toggle("hidden");
+      }
+
+      window.addEventListener("click", function (e) {
+        const btn = document.getElementById("lang-menu-btn");
+        const dropdown = document.getElementById("language-dropdown");
+        if (
+          btn &&
+          !btn.contains(e.target) &&
+          dropdown &&
+          !dropdown.contains(e.target)
+        ) {
+          dropdown.classList.add("hidden");
+        }
+      });
+
+      //CONTROLADORES VISUALES SELECTOR DE IDIOMAS MÓVIL
+      function toggleMobileLanguageSelector() {
+        const selector = document.getElementById("mobile-lang-selector");
+        selector.classList.toggle("hidden");
+
+        document.getElementById("mobile-menu").classList.add("hidden");
+      }
+
+      // CONTROL MENÚ MÓVIL
+      function toggleMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        mobileMenu.classList.toggle("hidden");
+        hamburgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+
+        document.getElementById("mobile-lang-selector").classList.add("hidden");
+      }
+
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", toggleMenu);
+
+      //CONTROL DEL CARRUSEL DE OFERTAS
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".carousel-dot");
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.remove("opacity-0", "pointer-events-none");
+            slide.classList.add("opacity-100");
+          } else {
+            slide.classList.remove("opacity-100");
+            slide.classList.add("opacity-0", "pointer-events-none");
+          }
+        });
+
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove("bg-white/20");
+            dot.classList.add("bg-brandRed");
+          } else {
+            dot.classList.remove("bg-brandRed");
+            dot.classList.add("bg-white/20");
+          }
+        });
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        let next = currentSlide + 1;
+        if (next >= slides.length) next = 0;
+        showSlide(next);
+      }
+
+      function prevSlide() {
+        let prev = currentSlide - 1;
+        if (prev < 0) prev = slides.length - 1;
+        showSlide(prev);
+      }
+
+      function setSlide(index) {
+        showSlide(index);
+      }
+
+      let autoSlideInterval = setInterval(nextSlide, 6000);
+
+      const carouselContainer = document.getElementById("ofertas");
+      carouselContainer.addEventListener("mouseenter", () =>
+        clearInterval(autoSlideInterval),
+      );
+      carouselContainer.addEventListener(
+        "mouseleave",
+        () => (autoSlideInterval = setInterval(nextSlide, 6000)),
+      );
+
+      //SELECCIONAR OFERTA DESDE EL CARRUSEL
+      function seleccionarOferta(oferta) {
+        const selectServicio = document.getElementById("service");
+        if (oferta === "Plato de Ducha") {
+          selectServicio.value = "Bañera por plato de ducha";
+        } else if (oferta === "Pack Climatización") {
+          selectServicio.value = "Aire acondicionado / Calentador";
+        } else if (oferta === "Cocinas") {
+          selectServicio.value = "Reformas de cocina / Encimeras";
+        }
+      }
+
+      function showFormError(message) {
+        const alertBox = document.getElementById("validation-alert");
+        const alertText = document.getElementById("validation-alert-text");
+        alertText.textContent = message;
+        alertBox.classList.remove("hidden");
+
+        alertBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      function hideFormError() {
+        const alertBox = document.getElementById("validation-alert");
+        alertBox.classList.add("hidden");
+      }
+
+      // CONTROLADOR DEL MODAL DE POLÍTICA DE PRIVACIDAD
+      function openPrivacyModal() {
+        const modal = document.getElementById("privacy-modal");
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closePrivacyModal() {
+        const modal = document.getElementById("privacy-modal");
+        modal.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      window.addEventListener("click", function (e) {
+        const modal = document.getElementById("privacy-modal");
+        if (e.target === modal) {
+          closePrivacyModal();
+        }
+      });
+
+      // CONTROLADOR DEL FORMULARIO DE CONTACTO
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+        hideFormError();
+
+        const form = event.target;
+        const button = form.querySelector('button[type="submit"]');
+        const originalButtonText = button.innerHTML;
+
+        // --CAPTURAR DATOS ---
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+        const privacy = document.getElementById("privacy").checked;
+        const honeypot = document.getElementById("honeypot").value;
+
+        // --- MEDIDAS DE SEGURIDAD (ANTI-SPAM / FLOOD) ---
+
+        if (honeypot !== "") {
+          console.warn("Spam detectado por Honeypot.");
+
+          form.classList.add("hidden");
+          document.getElementById("success-screen").classList.remove("hidden");
+          return;
+        }
+
+        // Bloqueo de reenvío por LocalStorage (Protección frente a inundación de clicks)
+        const lastSubmitTime = localStorage.getItem("tubaño_form_submitted");
+        const now = Date.now();
+        if (lastSubmitTime && now - lastSubmitTime < 180000) {
+          const remainingMinutes = Math.ceil(
+            (180000 - (now - lastSubmitTime)) / 60000,
+          );
+          showFormError(
+            `Para evitar spam, solo se permite un envío cada 3 minutos. Por favor, espere ${remainingMinutes} minuto(s) antes de enviar otra consulta.`,
+          );
+          return;
+        }
+
+        // ---VALIDACIÓN JS RIGUROSA ---
+
+        const lettersOnlyRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñÇç\s]+$/;
+        if (!lettersOnlyRegex.test(name)) {
+          showFormError(
+            "El campo Nombre y Apellidos solo acepta letras y espacios, sin números ni caracteres especiales.",
+          );
+          return;
+        }
+
+        const phoneRegex = /^\+?[0-9]{9,15}$/;
+        if (!phoneRegex.test(phone)) {
+          showFormError(
+            "El número de teléfono no es válido. Debe contener únicamente números y opcionalmente un '+' al principio (entre 9 y 15 caracteres totales).",
+          );
+          return;
+        }
+
+        if (email !== "") {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showFormError(
+              "El formato de correo electrónico no es correcto (debe contener '@' y un dominio válido). Si no tiene correo, puede dejar el campo vacío.",
+            );
+            return;
+          }
+        }
+
+        if (!privacy) {
+          showFormError(
+            "Debe aceptar obligatoriamente las políticas de protección de datos para poder tramitar su consulta.",
+          );
+          return;
+        }
+
+        // --- ESTADO VISUAL DE CARGA EN EL BOTÓN ---
+        button.disabled = true;
+        button.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg> Enviando Consulta Segura...
+            `;
+
+        // --- CONFIGURACIÓN DE CORREO DE PRUEBA ---
+        const destinationEmail = "tienda_campoamor@hotmail.es";
+        const formSubmitUrl = `https://formsubmit.co/ajax/${destinationEmail}`;
+
+        try {
+          const response = await fetch(formSubmitUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              "Nombre Cliente": name,
+              "Teléfono de Contacto": phone,
+              "Email del Remitente": email || "No indicado",
+              "Servicio de Interés": service,
+              "Consulta / Proyecto": message,
+              _subject: `Nuevo Presupuesto: ${service} - Tubaño`,
+              _captcha: "false",
+              _template: "table",
+            }),
+          });
+
+          if (response.ok) {
+            localStorage.setItem("tubaño_form_submitted", Date.now());
+
+            document.getElementById("summary-name").textContent = name;
+            document.getElementById("summary-phone").textContent = phone;
+            document.getElementById("summary-service").textContent = service;
+
+            form.classList.add("hidden");
+            document
+              .getElementById("success-screen")
+              .classList.remove("hidden");
+          } else {
+            throw new Error("No se pudo completar el envío.");
+          }
+        } catch (error) {
+          console.error("Error al enviar formulario:", error);
+          showFormError(
+            "Hubo un problema de conexión al enviar tu consulta. Por favor, inténtalo de nuevo en unos instantes.",
+          );
+        } finally {
+          button.disabled = false;
+          button.innerHTML = originalButtonText;
+        }
+      }
+
+      //RESTABLECER FORMULARIO
+      function resetForm() {
+        document.getElementById("contact-form").reset();
+        document.getElementById("contact-form").classList.remove("hidden");
+        document.getElementById("success-screen").classList.add("hidden");
+        hideFormError();
+      }
+    </script>
+
+    <!-- CARGA DE API DE GOOGLE TRANSLATE -->
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
